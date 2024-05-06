@@ -4,20 +4,17 @@ import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
-  <header>
+  <!-- <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  </header> -->
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
+  <main class="w-screen h-screen flex justify-center items-center">
+    <!-- <TheWelcome /> -->
+    <p>Hello World</p>
   </main>
 </template>
 
-<style scoped>
+<!-- <style scoped>
 header {
   line-height: 1.5;
 }
@@ -44,4 +41,4 @@ header {
     flex-wrap: wrap;
   }
 }
-</style>
+</style> -->
