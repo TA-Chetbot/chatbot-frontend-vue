@@ -1,44 +1,21 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import './assets/background.css';
+import ChatbotContainer from './components/ChatbotContainer.vue';
 </script>
 
 <template>
-  <!-- <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-  </header> -->
-
-  <main class="w-screen h-screen flex justify-center items-center">
-    <!-- <TheWelcome /> -->
-    <p>Hello World</p>
-  </main>
+  <div class="w-screen h-screen background-pattern">
+    <div className="w-full h-full flex flex-col justify-center items-center gap-[20px] text-center">
+      <h1 className="text-black font-bold text-7xl">Tugas Akhir Chatbot Swarm Made with Vue</h1>
+      <p className="text-xl text-slate-800">Click on the bottom right icon to toggle the Chatbot Interface</p>
+    </div>
+    <Suspense>
+      <template #default>
+        <ChatbotContainer />
+      </template>
+      <template #fallback>
+        <div>Loading...</div>
+      </template>
+    </Suspense>
+  </div>
 </template>
-
-<!-- <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style> -->
