@@ -38,7 +38,6 @@ async function getAnswer(question) {
   const data = await response.json()
   chatLog.value.push({ role: 'assistant', content: data.answer })
   isTyping.value = false
-  console.log(data)
   return data
 }
 
